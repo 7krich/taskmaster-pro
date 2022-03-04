@@ -282,7 +282,13 @@ $("#modalDueDate").datepicker({
   minDate: 1
 });
 
-
 // load tasks for the first time
 loadTasks();
+
+// timer
+setInterval(function () {
+  $(".card .list-group-item").each(function(index, el) {
+    auditTask(el);
+  });
+}, 5000);
 
